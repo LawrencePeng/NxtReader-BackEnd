@@ -54,7 +54,6 @@ typings/
 *.tgz
 
 # Yarn Integrity file
-# dotenv environment variables file
 .env
 
 public/images/
