@@ -1,0 +1,9 @@
+{
+  "name": "NxtReader-BackEnd",
+  "version": "1.0.0",
+  "description": "BackEnd of NxtReader",
+  "main": "index.js",
+  "repository": "git@github.com:NxtReader/NxtReader-BackEnd.git",
+  "author": "Lawrence <lawrencepeng233@gmail.com>, szu-bee <beeinszu@gmail.com>",
+  "license": "MIT"
+}
