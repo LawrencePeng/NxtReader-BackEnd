@@ -4,6 +4,12 @@
       "port": 3456,
       "timeout": 600000
     }
+  },
+  "db": {
+    "location": "mongodb://localhost",
+    "user": "xxx",
+    "password": "yyy",
+    "path": "/test"
   }
 }
 

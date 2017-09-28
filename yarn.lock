@@ -166,10 +166,6 @@ async@~0.2.6:
   version "0.2.10"
   resolved "http://registry.npm.taobao.org/async/download/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
 
-async@~1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/async/download/async-1.0.0.tgz#f8fc04ca3a13784ade9e1641af98578cfbd647a9"
-
 async@~2.1.2:
   version "2.1.5"
   resolved "http://registry.npm.taobao.org/async/download/async-2.1.5.tgz#e587c68580994ac67fc56ff86d3ac56bdbe810bc"
@@ -425,10 +421,6 @@ color-name@^1.1.1:
   version "1.1.3"
   resolved "http://registry.npm.taobao.org/color-name/download/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
 
-colors@1.0.x:
-  version "1.0.3"
-  resolved "http://registry.npm.taobao.org/colors/download/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
-
 combined-stream@^1.0.5, combined-stream@~1.0.5:
   version "1.0.5"
   resolved "http://registry.npm.taobao.org/combined-stream/download/combined-stream-1.0.5.tgz#938370a57b4a51dea2c77c15d5c5fdf895164009"
@@ -529,10 +521,6 @@ cryptiles@3.x.x:
 crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/crypto-random-string/download/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
-
-cycle@1.0.x:
-  version "1.0.3"
-  resolved "http://registry.npm.taobao.org/cycle/download/cycle-1.0.3.tgz#21e80b2be8580f98b468f379430662b046c34ad2"
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -740,10 +728,6 @@ extglob@^0.3.1:
 extsprintf@1.3.0, extsprintf@^1.2.0:
   version "1.3.0"
   resolved "http://registry.npm.taobao.org/extsprintf/download/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
-
-eyes@0.1.x:
-  version "0.1.8"
-  resolved "http://registry.npm.taobao.org/eyes/download/eyes-0.1.8.tgz#62cf120234c683785d902348a800ef3e0cc20bc0"
 
 fast-deep-equal@^1.0.0:
   version "1.0.0"
@@ -1301,6 +1285,10 @@ is-typedarray@~1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/is-typedarray/download/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
 
+is@^3.2.1:
+  version "3.2.1"
+  resolved "http://registry.npm.taobao.org/is/download/is-3.2.1.tgz#d0ac2ad55eb7b0bec926a5266f6c662aaa83dca5"
+
 isarray@0.0.1:
   version "0.0.1"
   resolved "http://registry.npm.taobao.org/isarray/download/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
@@ -1319,7 +1307,7 @@ isobject@^2.0.0:
   dependencies:
     isarray "1.0.0"
 
-isstream@0.1.x, isstream@~0.1.2:
+isstream@~0.1.2:
   version "0.1.2"
   resolved "http://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
@@ -1766,6 +1754,13 @@ mongodb@2.2.31:
     es6-promise "3.2.1"
     mongodb-core "2.1.15"
     readable-stream "2.2.7"
+
+mongoose-validator@^1.3.2:
+  version "1.3.2"
+  resolved "http://registry.npm.taobao.org/mongoose-validator/download/mongoose-validator-1.3.2.tgz#49f39c345432c2ed5828104d56bce029887b6682"
+  dependencies:
+    is "^3.2.1"
+    validator "^7.0.0"
 
 mongoose@^4.11.13:
   version "4.11.13"
@@ -2695,10 +2690,6 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-stack-trace@0.0.x:
-  version "0.0.10"
-  resolved "http://registry.npm.taobao.org/stack-trace/download/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
-
 "statuses@>= 1.3.1 < 2", statuses@^1.2.0:
   version "1.3.1"
   resolved "http://registry.npm.taobao.org/statuses/download/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
@@ -2968,6 +2959,10 @@ uuid@^3.0.0, uuid@^3.1.0:
   version "3.1.0"
   resolved "http://registry.npm.taobao.org/uuid/download/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
+validator@^7.0.0:
+  version "7.2.0"
+  resolved "http://registry.npm.taobao.org/validator/download/validator-7.2.0.tgz#a63dcbaba51d4350bf8df20988e0d5a54d711791"
+
 vary@^1.0.0:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/vary/download/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
@@ -3009,17 +3004,6 @@ widest-line@^1.0.0:
 window-size@0.1.0:
   version "0.1.0"
   resolved "http://registry.npm.taobao.org/window-size/download/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
-
-winston@^2.3.1:
-  version "2.3.1"
-  resolved "http://registry.npm.taobao.org/winston/download/winston-2.3.1.tgz#0b48420d978c01804cf0230b648861598225a119"
-  dependencies:
-    async "~1.0.0"
-    colors "1.0.x"
-    cycle "1.0.x"
-    eyes "0.1.x"
-    isstream "0.1.x"
-    stack-trace "0.0.x"
 
 with@^5.0.0:
   version "5.1.1"
