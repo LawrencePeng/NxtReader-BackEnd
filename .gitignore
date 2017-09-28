@@ -60,3 +60,4 @@ typings/
 public/images/
 public/javascripts/
 tmp/
+.idea/
