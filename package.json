@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:NxtReader/NxtReader-BackEnd.git",
   "author": "Lawrence <lawrencepeng233@gmail.com>, szu-bee <beeinszu@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.3.0"
+  }
 }
