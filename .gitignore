@@ -5,6 +5,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.idea/
+
 # Runtime data
 pids
 *.pid
@@ -52,8 +54,9 @@ typings/
 *.tgz
 
 # Yarn Integrity file
-.yarn-integrity
-
 # dotenv environment variables file
 .env
 
+public/images/
+public/javascripts/
+tmp/
