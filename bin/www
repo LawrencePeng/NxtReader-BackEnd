@@ -3,85 +3,67 @@
 /**
  * Module dependencies.
  */
-const app = require('../app');
-const debug = require('debug')('demo:server');
-const http = require('http');
+const app = require('../app')
+const debug = require('debug')('demo:server')
+const http = require('http')
 
 /**
- * Get port from environment and store in Express.
+ * Util deps.
  */
-let port = normalizePort(process.env.PORT || '3000');
-// app.set('port', port);
+const parseCfg = require('../util/config')
+
+
+const config = parseCfg('conf/conf.json')
+const serverConfig = config['server']['http']
 
 /**
- * Create HTTP server.
+ * Default Setup of Node server
+ * @type {{PORT: number, TIMEOUT: number, DEFAULT_ON_ERR: ((error)), DEFAULT_ON_LISTENING: (())}}
  */
-const server = http.createServer(app.callback());
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort(val) {
-  const port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
-}
-
-/**
- * Event listener for HTTP server "error" event.
- */
-
-function onError(error) {
+const DEFAULT_SOFT_SETUP = {
+  PORT: 3000,
+  TIMEOUT: 60000, // 1 min
+  DEFAULT_ON_ERR(error){
   if (error.syscall !== 'listen') {
     throw error;
   }
 
   const bind = typeof port === 'string'
     ? 'Pipe ' + port
-    : 'Port ' + port;
+    : 'Port ' + port
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
-      process.exit(1);
+      process.exit(1)
       break;
     case 'EADDRINUSE':
       console.error(bind + ' is already in use');
-      process.exit(1);
+      process.exit(1)
       break;
     default:
       throw error;
   }
+}, // Event listener for HTTP server "error" event.
+  DEFAULT_ON_LISTENING() {
+    const addr = server.address()
+    const bind = typeof addr === 'string'
+      ? 'pipe ' + addr
+      : 'port ' + addr.port;
+    debug('Listening on ' + bind)
+  } // Event listener for HTTP server "listening" event.
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * Create HTTP server.
  */
+const server = http.createServer(app.callback())
 
-function onListening() {
-  const addr = server.address();
-  const bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+server.timeout = serverConfig['timeout'] || DEFAULT_SOFT_SETUP.TIMEOUT
+server.listen(serverConfig['port'] || DEFAULT_SOFT_SETUP.PORT)
+server.on('error', DEFAULT_SOFT_SETUP.DEFAULT_ON_ERR)
+server.on('listening', DEFAULT_SOFT_SETUP.DEFAULT_ON_LISTENING)

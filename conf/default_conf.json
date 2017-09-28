@@ -1,0 +1,17 @@
+{
+    "server": {
+        "http": {
+            "port": 3456,
+            "timeout": 600000
+        },
+        "logger": {
+            "lib": "winston",
+            "default_level": "debug",
+            "appender": {
+                "name": "NxtBE",
+                "file": "log/NxtBE.log"
+            }
+        }
+    }
+}
+
